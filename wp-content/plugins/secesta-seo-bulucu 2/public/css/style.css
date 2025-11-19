@@ -1,0 +1,229 @@
+.secesta-rank-finder {
+    font-family: 'Nunito', sans-serif;
+    padding: 0.5rem;
+}
+
+.secesta-rank-finder .container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.secesta-rank-finder .card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 0;
+    border-radius: 0.5rem;
+}
+
+.secesta-rank-finder .card-header {
+    background-color: #1f2c3a;
+    border-bottom: none;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.secesta-rank-finder .card-body {
+    padding: 1.25rem;
+}
+
+.secesta-rank-finder .form-label {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    color: #1f2c3a;
+    margin-bottom: 0.5rem;
+}
+
+.secesta-rank-finder .input-group-text {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: #6c757d;
+}
+
+.secesta-rank-finder .input-group-text .fas {
+    color: #1f2c3a !important;
+}
+
+.secesta-rank-finder .form-control {
+    border: 1px solid #ced4da;
+}
+
+.secesta-rank-finder .form-control:focus {
+    border-color: #1f2c3a;
+    box-shadow: 0 0 0 0.2rem rgba(31, 44, 58, 0.15);
+}
+
+.secesta-rank-finder .btn-primary {
+    font-family: 'Nunito', sans-serif;
+    background-color: #1f2c3a;
+    border-color: #1f2c3a;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.secesta-rank-finder .btn-primary:hover {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Rank Display */
+.secesta-rank-success,
+.secesta-rank-fail {
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.secesta-rank-number {
+    font-family: 'Nunito', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 0.5rem;
+}
+
+.secesta-rank-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.25rem;
+    color: #495057;
+}
+
+.secesta-rank-text.text-danger {
+    color: #dc3545 !important;
+}
+
+/* Loading Spinner */
+.secesta-loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+.secesta-loading.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secesta-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #1f2c3a;
+    border-radius: 50%;
+    animation: secesta-spin 1s linear infinite;
+}
+
+@keyframes secesta-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Table Styles */
+.secesta-rank-finder .table {
+    margin-bottom: 0;
+}
+
+.secesta-rank-finder .table th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+    color: #1f2c3a;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.secesta-rank-finder .table td {
+    vertical-align: middle;
+    color: #495057;
+}
+
+.secesta-rank-finder .table td a {
+    color: #1f2c3a;
+    text-decoration: none;
+}
+
+.secesta-rank-finder .table td a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+/* Badge Styles */
+.secesta-rank-finder .badge {
+    font-weight: normal;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Progress Bar */
+.secesta-rank-finder .progress {
+    background-color: #e9ecef;
+    overflow: hidden;
+}
+
+.secesta-rank-finder .progress-bar {
+    background-color: #28a745;
+    transition: width 0.6s ease;
+}
+
+.secesta-rank-finder .g-recaptcha {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.secesta-rank-finder .g-recaptcha > div {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#results-table {
+    width: 100%;
+    margin-top: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#results-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    padding: 12px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+#results-table td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+#results-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+#results-table tbody tr[data-is-target="true"] {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+#results-table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#results-table a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+} 
