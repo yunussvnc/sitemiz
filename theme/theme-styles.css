@@ -1,0 +1,504 @@
+/**
+ * Secesta Tema Stil Tanımları
+ * Tema genelinde kullanılan stil kodları
+ */
+
+/* ============================================
+   TEMEL TEMA AYARLARI
+   ============================================ */
+
+:root {
+  /* Container Genişliği */
+  --container: 1320px;
+  --container-max-width: 1290px;
+  --gutter-width: 30px;
+  
+  /* Font Aileleri */
+  --e-global-typography-text-font-family: "Mona Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  --e-global-typography-accent-font-family: "Mona Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  
+  /* Scroll Bar */
+  --scroll-bar: 8px;
+}
+
+/* ============================================
+   BODY TEMEL AYARLAR
+   ============================================ */
+
+body {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background_light);
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+body, button, input {
+  font-size: 20px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  color: var(--text);
+  font-family: var(--e-global-typography-text-font-family);
+  font-weight: 400;
+}
+
+/* ============================================
+   TİPOGRAFİ
+   ============================================ */
+
+h1 {
+  clear: both;
+  margin: 0 0 0.5407911001em;
+  font-weight: 500;
+  color: var(--accent);
+  font-family: var(--e-global-typography-accent-font-family);
+  letter-spacing: -1px;
+  font-size: clamp(62px, 6.5vmax, 100px);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+p {
+  margin: 0 0 1.618em;
+}
+
+/* ============================================
+   BUTON STİLLERİ
+   ============================================ */
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: capitalize;
+  font-family: var(--e-global-typography-text-font-family);
+  border-radius: 20px;
+  color: var(--white);
+  padding: 15px 32px;
+  text-decoration: none;
+  text-shadow: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: var(--primary);
+  position: relative;
+}
+
+button i {
+  font-size: 12px;
+  transform: rotateZ(0);
+  margin-top: -2px;
+}
+
+button:hover {
+  background-color: var(--primary_hover);
+}
+
+/* Elementor Buton Stilleri */
+.elementor-button {
+  background-color: #69727d;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 1;
+  padding: 12px 24px;
+  fill: #fff;
+  text-align: center;
+}
+
+.elementor-button-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+}
+
+.elementor-button-icon {
+  align-items: center;
+  display: flex;
+}
+
+.elementor-button-icon svg {
+  height: auto;
+  width: 1em;
+}
+
+.elementor-button-text {
+  display: inline-block;
+}
+
+/* Diteck Özel Buton Stilleri */
+.elementor-widget-diteck-button .elementor-button {
+  display: inline-grid;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: 20px;
+  padding: 6px;
+  text-decoration: none;
+  text-shadow: none;
+  -webkit-appearance: none;
+  background-color: var(--accent);
+  position: relative;
+  text-transform: capitalize;
+}
+
+.elementor-widget-diteck-button .elementor-button .elementor-button-text {
+  color: #fff;
+}
+
+.elementor-widget-diteck-button .elementor-button .elementor-button-icon {
+  background: var(--primary);
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.elementor-widget-diteck-button .elementor-button-content-wrapper {
+  padding-right: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.elementor-widget-diteck-button .elementor-button-content-wrapper:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  left: 15px;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 15px;
+}
+
+.elementor-widget-diteck-button.elementor-button-type-outline .elementor-button {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.elementor-widget-diteck-button.elementor-button-type-outline .elementor-button .elementor-button-text {
+  color: var(--accent);
+}
+
+/* ============================================
+   FORM ELEMANLARI
+   ============================================ */
+
+input[type="text"],
+input[type="password"] {
+  font-size: 16px;
+  line-height: 1.625;
+  padding: 16px 25px;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  outline: 0;
+  color: var(--accent);
+  border: none;
+  border-radius: 20px;
+}
+
+label {
+  font-weight: 600;
+}
+
+/* ============================================
+   NAVİGASYON STİLLERİ
+   ============================================ */
+
+.main-navigation ul.menu > li.menu-item > a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 3.15em 1.5em;
+  font-size: 18px;
+  line-height: 1.3333333333;
+  font-weight: 500;
+}
+
+.main-navigation ul.menu > li.menu-item > a:before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: calc(50% - 3px);
+  transform: translateX(-50%);
+  height: 6px;
+  width: 6px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.main-navigation .sub-menu {
+  padding: 24px 0;
+  background-color: var(--background);
+  border-radius: 20px 20px;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.05);
+}
+
+.main-navigation .sub-menu .menu-item a {
+  padding: 7px 45px;
+  width: 100%;
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ============================================
+   MOBİL NAVİGASYON
+   ============================================ */
+
+.diteck-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  width: 330px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  transform: translate3d(-330px, 0, 0);
+}
+
+@media (min-width: 410px) {
+  .diteck-mobile-nav {
+    width: 410px;
+    transform: translate3d(-410px, 0, 0);
+  }
+}
+
+.menu-mobile-nav-button {
+  display: block;
+  font-size: 15px;
+  color: var(--accent);
+}
+
+@media (min-width: 1024px) {
+  .menu-mobile-nav-button {
+    display: none;
+  }
+}
+
+/* ============================================
+   CONTAINER AYARLARI
+   ============================================ */
+
+.e-con {
+  --container-max-width: 1290px;
+}
+
+@media (max-width: 1024px) {
+  .e-con {
+    --container-max-width: 1024px;
+  }
+}
+
+@media (max-width: 767px) {
+  .e-con {
+    --container-max-width: 767px;
+  }
+}
+
+/* ============================================
+   SCROLL UP BUTONU
+   ============================================ */
+
+.scrollup {
+  display: block;
+  position: fixed;
+  right: 30px;
+  bottom: 80px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  background: var(--border);
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  transform: scale(0);
+  z-index: 999;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 1024px) {
+  .scrollup {
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scrollup {
+    opacity: 0 !important;
+  }
+}
+
+.scrollup i {
+  font-size: 18px;
+  margin-top: -5px;
+}
+
+/* ============================================
+   BREADCRUMB STİLLERİ
+   ============================================ */
+
+.breadcrumb-wrap .breadcrumb-overlay {
+  opacity: 0.5;
+}
+
+ul.hfe-breadcrumbs {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.hfe-breadcrumbs li {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+ul.hfe-breadcrumbs li:last-child {
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE AYARLAR
+   ============================================ */
+
+@media (min-width: 1025px) {
+  .primary-navigation {
+    display: block;
+  }
+  
+  .main-navigation {
+    clear: both;
+    display: block;
+    width: 100%;
+  }
+  
+  .main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: block;
+  }
+  
+  .main-navigation ul li {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .main-navigation ul ul.sub-menu {
+    float: left;
+    position: absolute;
+    top: calc(100% + 10px);
+    transform: translateY(20px);
+    z-index: 99999;
+    left: -30px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .main-navigation ul ul.sub-menu li {
+    display: block;
+    min-width: 280px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-navigation ul.menu {
+    max-height: none;
+    overflow: visible;
+    margin-left: -1.1em;
+    margin-right: -1.1em;
+  }
+  
+  .main-navigation ul.menu > li > a {
+    padding: 1.287em 1.1em;
+  }
+  
+  .main-navigation ul.menu ul.sub-menu {
+    margin-left: 0;
+  }
+  
+  .main-navigation ul.menu ul.sub-menu > li:last-child > a {
+    border-bottom: none;
+  }
+}
+
+/* ============================================
+   UTİLİTY CLASSES
+   ============================================ */
+
+.d-none {
+  display: none;
+}
+
+.clear::before,
+.clear::after,
+.site-content::before,
+.site-content::after {
+  content: "";
+  display: table;
+}
+
+.clear::after,
+.site-content::after {
+  clear: both;
+}
+
+/* ============================================
+   İKON FONT AYARLARI
+   ============================================ */
+
+[class*="diteck-icon-"] {
+  font-family: "diteck-icon";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.diteck-icon-arrow-right-solid:before {
+  content: "\e007";
+}
+
+.diteck-icon-arrow-up:before {
+  content: "\e009";
+}
+
+.diteck-icon-bars:before {
+  content: "\e021";
+}
+
+.diteck-icon-plus:before {
+  content: "\e048";
+}
+
+.diteck-icon-times:before {
+  content: "\e05a";
+}
+

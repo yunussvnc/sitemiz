@@ -1,0 +1,293 @@
+/**
+ * Responsive Breakpoint Tanımları
+ * Tüm ekran boyutları için breakpoint'ler ve media query'ler
+ */
+
+/* ============================================
+   BREAKPOINT TANIMLARI
+   ============================================ */
+
+:root {
+    /* Elementor Breakpoints */
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1025px;
+    --breakpoint-xl: 1440px;
+    --breakpoint-xxl: 1600px;
+
+    /* Custom Breakpoints */
+    --breakpoint-mobile: 767px;
+    --breakpoint-mobile-extra: 880px;
+    --breakpoint-tablet: 1024px;
+    --breakpoint-tablet-extra: 1200px;
+    --breakpoint-laptop: 1366px;
+    --breakpoint-widescreen: 2400px;
+}
+
+/* ============================================
+   ELEMENTOR RESPONSIVE AYARLARI
+   ============================================ */
+
+.elementor-responsive {
+    --breakpoints-mobile: 767px;
+    --breakpoints-mobile-extra: 880px;
+    --breakpoints-tablet: 1024px;
+    --breakpoints-tablet-extra: 1200px;
+    --breakpoints-laptop: 1366px;
+    --breakpoints-widescreen: 2400px;
+}
+
+/* ============================================
+   MOBİL (0-767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+
+    /* Elementor Hidden Mobile */
+    .elementor-hidden-mobile {
+        display: none !important;
+    }
+
+    /* Container Genişlikleri */
+    .e-con {
+        --container-max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Font Boyutları */
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: clamp(40px, 8vw, 60px);
+    }
+
+    h2 {
+        font-size: clamp(32px, 7vw, 50px);
+    }
+
+    h3 {
+        font-size: clamp(24px, 6vw, 40px);
+    }
+
+    /* Navigasyon */
+    .main-navigation {
+        display: none;
+    }
+
+    .menu-mobile-nav-button {
+        display: block;
+    }
+
+    /* Butonlar */
+    button,
+    .elementor-button {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    /* Scroll Up */
+    .scrollup {
+        opacity: 0 !important;
+    }
+}
+
+/* ============================================
+   MOBİL EXTRA (768px-880px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 880px) {
+    .elementor-hidden-mobile_extra {
+        display: none !important;
+    }
+
+    .e-con {
+        --container-max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* ============================================
+   TABLET (881px-1024px)
+   ============================================ */
+
+@media (min-width: 881px) and (max-width: 1024px) {
+    .elementor-hidden-tablet {
+        display: none !important;
+    }
+
+    .e-con {
+        --container-max-width: 1024px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    .main-navigation ul.menu>li.menu-item>a {
+        padding: 17px 12px;
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   TABLET EXTRA (1025px-1200px)
+   ============================================ */
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .elementor-hidden-tablet_extra {
+        display: none !important;
+    }
+
+    .e-con {
+        --container-max-width: 1200px;
+    }
+
+    .elementor-kit-220521 {
+        --e-global-typography-heading_title-font-size: 64px;
+    }
+}
+
+/* ============================================
+   LAPTOP (1201px-1366px)
+   ============================================ */
+
+@media (min-width: 1201px) and (max-width: 1366px) {
+    .elementor-hidden-laptop {
+        display: none !important;
+    }
+
+    .e-con {
+        --container-max-width: 1290px;
+    }
+}
+
+/* ============================================
+   DESKTOP (1367px+)
+   ============================================ */
+
+@media (min-width: 1367px) {
+    .elementor-hidden-desktop {
+        display: none !important;
+    }
+
+    .e-con {
+        --container-max-width: 1290px;
+    }
+
+    /* Fixed Background Attachment */
+    .elementor-element:not(.elementor-motion-effects-element-type-background) {
+        background-attachment: fixed;
+    }
+}
+
+/* ============================================
+   WIDESCREEN (2400px+)
+   ============================================ */
+
+@media (min-width: 2400px) {
+    .e-con {
+        --container-max-width: 1740px;
+    }
+}
+
+/* ============================================
+   YÜKSEKLİK BAZLI MEDIA QUERY'LER
+   ============================================ */
+
+/* Kısa Ekranlar için Lazy Loading Optimizasyonu */
+@media screen and (max-height: 640px) {
+    .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+        background-image: none !important;
+    }
+}
+
+@media screen and (max-height: 1024px) {
+    .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+        background-image: none !important;
+    }
+}
+
+@media screen and (max-height: 1024px) {
+    .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+        background-image: none !important;
+    }
+}
+
+/* ============================================
+   ORIENTATION (YÖNLENDİRME)
+   ============================================ */
+
+/* Dikey Yönlendirme */
+@media (orientation: portrait) {
+    .landscape-only {
+        display: none;
+    }
+}
+
+/* Yatay Yönlendirme */
+@media (orientation: landscape) {
+    .portrait-only {
+        display: none;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    .elementor-button,
+    button {
+        display: none;
+    }
+}
+
+/* ============================================
+   REDUCED MOTION (Hareket Azaltma)
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   DARK MODE (Karanlık Mod)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    /* İsteğe bağlı: Karanlık mod desteği eklenebilir */
+    /* body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  } */
+}
